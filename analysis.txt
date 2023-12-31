@@ -1,0 +1,170 @@
+CS 528 – Project 4
+By: Michael Zeolla, 
+
+
+Requirements: Signal Processing Toolbox for Matlab
+
+
+Question 5 Answer:
+
+
+Overall Results:
+* The best overall models were: Quadratic SVM, Bagged Ensemble Trees, and Neural Networks, each were correspond to the top models on the testing data.
+* The Feature rank in order of best to worse (1-7): 
+1. Option 5: mean, PCA, Standard deviation, Average Absolute Difference, Average Resultant Acceleration, Time Between Peaks and Binned Distribution - 91% Accuracy
+2. Option 7: mean, PCA, Standard deviation, IQR, Mean Absolute Deviation (MAD), Correlation between axes, Entropy, and Kurtosis - 91% Accuracy
+3. Option 2: mean, PCA, Standard deviation and Average Absolute Difference - 90% Accuracy
+4. Option 4: mean, PCA, Standard deviation), Average Absolute Difference, Average Resultant Acceleration and Time Between Peaks - 90% Accuracy
+5. Option 6: mean, PCA, Standard deviation and IQR - 89% Accuracy
+6. Option 3: mean, PCA, Standard deviation, Average Absolute Difference and Average Resultant Acceleration - 88% Accuracy
+7. Option 1: mean, PCA and Standard deviation - 88% Accuracy
+
+
+30% Holdout:
+1. only the 3 original features (mean, PCA and Standard deviation)
+   1. The best Train Model was Wide Neural Network - 96.5% Accuracy
+   2. The best Test Model Tri Layered Neural Network was 88.2% Accuracy
+2. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference (i.e. 4 features in total)
+   1. The best Train Model was Cubic SVM - 96.8% Accuracy
+   2. The best Test Model was Narrow Neural Network - 87.4% Accuracy
+3. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference and Average Resultant Acceleration (i.e. 5 features in total)
+   1. The best Train Model was Cubic SVM - 96.7% Accuracy
+   2. The best Test Model was Narrow Neural Network - 88.2% Accuracy
+4. 3 original features (mean, PCA, Standard deviation), and also Average Absolute Difference, Average Resultant Acceleration and Time Between Peaks (i.e. 6 features in total)?
+   1. The best Train Model was Quadratic SVM - 96.8% Accuracy
+   2. The best Test Model was Quadratic SVM - 88.4% Accuracy
+5. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference, Average Resultant Acceleration, Time Between Peaks and Binned Distribution (i.e. 7 features in total)
+   1. The best Train Model was Quadratic SVM - 96.59% Accuracy
+   2. The best Test Model was Cubic SVM - 91.10% Accuracy
+6. 3 original features (mean, PCA, Standard deviation) and also Interquartile Range (IQR) (i.e. 4 features in total)
+   1. The best Train Model was Medium Neural Network - 96.6% Accuracy
+   2. The best Test Model was Tri Layered Neural Network - 89% Accuracy
+7. 3 original features (mean, PCA, Standard deviation) and Interquartile range (IQR), Mean Absolute Deviation (MAD), Correlation between axes, Entropy, and Kurtosis (i.e. 8 features in total)
+   1. The best Train Model was Ensemble Bagged Trees - 95.5% accuracy
+   2. The best Test Model was Ensemble Bagged Trees - 87.99% Accuracy
+
+
+
+
+25% Holdout:
+1. only the 3 original features (mean, PCA and Standard deviation)
+   1. The best Train Model was Ensemble Subspace KNN - 97% Accuracy
+   2. The best Test Model Narrow Neural Network was 86.5% Accuracy
+2. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference (i.e. 4 features in total)
+   1. The best Train Model was Wide Neural Network - 97.5% Accuracy
+   2. The best Test Model was Narrow Neural Network - 88.4% Accuracy
+3. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference and Average Resultant Acceleration (i.e. 5 features in total)
+   1. The best Train Model was Cubic SVM - 97.1% Accuracy
+   2. The best Test Model was Linear SVM - 88% Accuracy
+4. 3 original features (mean, PCA, Standard deviation), and also Average Absolute Difference, Average Resultant Acceleration and Time Between Peaks (i.e. 6 features in total)?
+   1. The best Train Model was Bilayered Neural Network - 96.2% Accuracy
+   2. The best Test Model was Bilayered Neural Network - 88.8% Accuracy
+5. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference, Average Resultant Acceleration, Time Between Peaks and Binned Distribution (i.e. 7 features in total)
+   1. The best Train Model was  Quadratic SVM - 96.62% Accuracy
+   2. The best Test Model was Quadratic SVM - 91.04% Accuracy
+6. 3 original features (mean, PCA, Standard deviation) and also Interquartile Range (IQR) (i.e. 4 features in total)
+   1. The best Train Model was Cubic SVM - 97.6% Accuracy
+   2. The best Test Model was Quadratic SVM - 88.9% Accuracy
+7. 3 original features (mean, PCA, Standard deviation) and Interquartile range (IQR), Mean Absolute Deviation (MAD), Correlation between axes, Entropy, and Kurtosis (i.e. 8 features in total)
+   1. The best Train Model was Ensemble Bagged Trees - 95.76% Accuracy
+   2. The best Test Model was Ensemble Bagged Trees - 91.0234% Accuracy
+
+
+
+
+20% Holdout:
+1. only the 3 original features (mean, PCA and Standard deviation)
+   1. The best Train Model was Ensemble Subspace KNN - 96.6% Accuracy
+   2. The best Test Model was Bilayered Neural Network - 87.1% Accuracy
+2. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference (i.e. 4 features in total)
+   1. The best Train Model was Wide Neural Network - 97.4% Accuracy
+   2. The best Train Model was Bilayered Neural Network - 90.2% Accuracy
+3. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference and Average Resultant Acceleration (i.e. 5 features in total)
+   1. The best Train Model was Wide Neural Network - 97.9% Accuracy
+   2. The best Test Model was Narrow Neural Network - 88.8% Accuracy
+4. 3 original features (mean, PCA, Standard deviation), and also Average Absolute Difference, Average Resultant Acceleration and Time Between Peaks (i.e. 6 features in total)?
+   1. The best Train Model was Cubic SVM - 97.0% Accuracy
+   2. The best Test Model was Quadratic SVM - 88.6% Accuracy
+5. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference, Average Resultant Acceleration, Time Between Peaks and Binned Distribution (i.e. 7 features in total)?
+   1. The best Train Model was Quadratic SVM - 96.73469% Accuracy
+   2. The best Test Model was Cubic SVM - 91.10% Accuracy
+6. 3 original features (mean, PCA, Standard deviation) and also Interquartile Range (IQR) (i.e. 4 features in total)
+   1. The best Train Model was Cubic SVM - 97.2% Accuracy
+   2. The best Test Model was Quadratic SVM  - 88.4% Accuracy
+7. 3 original features (mean, PCA, Standard deviation) and Interquartile range (IQR), Mean Absolute Deviation (MAD), Correlation between axes, Entropy, and Kurtosis (i.e. 8 features in total)
+   1. The best Train Model was Ensemble Bagged Trees - 94.96% Accuracy
+   2. The best Test Model was  Ensemble Bagged Trees - 87.44% Accuracy
+
+
+
+
+15% Holdout:
+1. only the 3 original features (mean, PCA and Standard deviation)
+   1. The best Train Model was Wide Neural Network - 97.5% Accuracy
+   2. The best Test Model was Narrow Neural Network - 87.5% Accuracy
+2. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference (i.e. 4 features in total)
+   1. The best Train Model was Ensemble Subspace KNN - 97.1% Accuracy
+   2. The best Test Model was Tri Layered Neural Network - 90% Accuracy
+3. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference and Average Resultant Acceleration (i.e. 5 features in total)
+   1. The best Train Model was Ensemble Bagged Trees - 97.6% Accuracy
+   2. The best Test Model was Narrow Neural Network - 88.9% Accuracy
+4. 3 original features (mean, PCA, Standard deviation), and also Average Absolute Difference, Average Resultant Acceleration and Time Between Peaks (i.e. 6 features in total)?
+   1. The best Train Model was Bagged Trees - 96.7% Accuracy
+   2. The best Test Model was Quadratic SVM - 88.5% Accuracy
+5. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference, Average Resultant Acceleration, Time Between Peaks and Binned Distribution (i.e. 7 features in total)?
+   1. The best Train Model was Quadratic SVM - 97.54% Accuracy
+   2. The best Test Model was Quadratic SVM - 91.00% Accuracy
+6. 3 original features (mean, PCA, Standard deviation) and also Interquartile Range (IQR) (i.e. 4 features in total)
+   1. The best Train Model was Ensemble Subspace KNN - 98% Accuracy
+   2. The best Test Model was Trilayered Neural Network - 88.6% Accuracy
+7. 3 original features (mean, PCA, Standard deviation) and Interquartile range (IQR), Mean Absolute Deviation (MAD), Correlation between axes, Entropy, and Kurtosis (i.e. 8 features in total)
+   1. The best Train Model was  Ensemble Bagged Trees - 95.28% Accuracy
+   2. The best Test Model was  Ensemble Bagged Trees - 87.51% Accuracy
+
+
+10% Holdout:
+1. only the 3 original features (mean, PCA and Standard deviation)
+   1. The best Train Model was Ensemble Bagged Tree - 97% Accuracy
+   2. The best Test Model was Narrow Neural Network - 87% Accuracy
+2. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference (i.e. 4 features in total)
+   1. The best Train Model was Medium Neural Network - 98% Accuracy
+   2. The best Test Model was Bilayered Neural Network - 88% Accuracy
+3. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference and Average Resultant Acceleration (i.e. 5 features in total)
+   1. The best Train Model was Ensemble Bagged Trees - 98% Accuracy
+   2. The best Test Model was Bilayered Neural Network - 88% Accuracy
+4. 3 original features (mean, PCA, Standard deviation), and also Average Absolute Difference, Average Resultant Acceleration and Time Between Peaks (i.e. 6 features in total)?
+   1. The best Train Model was Cubic SVM - 96.9% Accuracy
+   2. The best Test Model was Cubic SVM - 87.2% Accuracy
+5. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference, Average Resultant Acceleration, Time Between Peaks and Binned Distribution (i.e. 7 features in total)?
+   1. The best Train Model was Cubic SVM - 91.10% Accuracy
+   2. The best Test Model was Cubic SVM -  97.82% Accuracy
+6. 3 original features (mean, PCA, Standard deviation) and also Interquartile Range (IQR) (i.e. 4 features in total)
+   1. The best Train Model was Wide Neural Network - 97.4% Accuracy
+   2. The best Test Model was Medium Gussian SVM - 88.3% Accuracy
+7. 3 original features (mean, PCA, Standard deviation) and Interquartile range (IQR), Mean Absolute Deviation (MAD), Correlation between axes, Entropy, and Kurtosis (i.e. 8 features in total)
+   1. The best Train Model was  Ensemble Subspace KNN - 94.96% Accuracy
+   2. The best Test Model was  Ensemble Bagged Trees - 88.12% Accuracy
+
+
+5% Holdout:
+1. only the 3 original features (mean, PCA and Standard deviation)
+   1. The best Train Model was Subic SVM - 96.5% Accuracy
+   2. The best Test Model was Trilayered Neural Network - 86.5%
+2. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference (i.e. 4 features in total)
+   1. The best Train Model was Wide Neural Network - 98.1% Accuracy
+   2. The best Test Model was Quadratic SVM - 87.1% Accuracy
+3. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference and Average Resultant Acceleration (i.e. 5 features in total)
+   1. The best Train Model was Ensemble Subspace KNN - 98.1% Accuracy
+   2. The best Test Model was Medium Neural Network - 88.8% Accuracy
+4. 3 original features (mean, PCA, Standard deviation), and also Average Absolute Difference, Average Resultant Acceleration and Time Between Peaks (i.e. 6 features in total)?
+   1. The best Train Model was Quadratic SVM - 96.7% Accuracy
+   2. The best Test Model was Trilayered Neural Network - 90.2% Accuracy
+5. 3 original features (mean, PCA, Standard deviation) and also Average Absolute Difference, Average Resultant Acceleration, Time Between Peaks and Binned Distribution (i.e. 7 features in total)?
+   1. The best Train Model was Quadratic SVM - 97.00% Accuracy
+   2. The best Test Model was Quadratic SVM - 90.97% Accuracy
+6. 3 original features (mean, PCA, Standard deviation) and also Interquartile Range (IQR) (i.e. 4 features in total)
+   1. The best Train Model was Fine KNN or Wide Neural Network - 98.9% Accuracy
+   2. The best Test Model was Quadratic SVM - 88.6% Accuracy
+7. 3 original features (mean, PCA, Standard deviation) and Interquartile range (IQR), Mean Absolute Deviation (MAD), Correlation between axes, Entropy, and Kurtosis (i.e. 8 features in total)
+   1. The best Train Model was  Ensemble Bagged Trees - 96.45% Accuracy
+   2. The best Test Model was  Ensemble Subspace KNN - 87.41% Accuracy
